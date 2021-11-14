@@ -4,15 +4,15 @@ function getUiConfig() {
             // Called when the user has been successfully signed in.
             'signInSuccessWithAuthResult': function(authResult, redirectUrl) {
                 if (authResult.user) {
-                    handleSignedInUser(authResult.user);
+                    console.log("called from callback")
+                    return handleSignedInUser(authResult.user);
                 }
                 if (authResult.additionalUserInfo) {
                     document.getElementById('is-new-user').textContent =
                         authResult.additionalUserInfo.isNewUser ?
                             'New User' : 'Existing User';
                 }
-                // Do not redirect.
-                return false;
+                return true;
             }
         },
         signInSuccessUrl: 'index.html',
@@ -47,6 +47,8 @@ const handleSignedInUser = function(user) {
     for (let element of document.getElementsByClassName('user-signed-out')){
         element.style.display="none";
     }
+
+    return true;
 };
 
 const handleSignedOutUser = function() {
@@ -61,6 +63,7 @@ const handleSignedOutUser = function() {
 };
 
 firebase.auth().onAuthStateChanged(function(user) {
+    console.log("auth changed");
     user ? handleSignedInUser(user) : handleSignedOutUser();
 });
 

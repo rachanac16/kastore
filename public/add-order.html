@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome to Firebase Hosting</title>
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/9.4.1/firebase-app-compat.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/9.4.1/firebase-auth-compat.js"></script>
+    <!--    <script defer src="/__/firebase/9.4.1/firebase-database-compat.js"></script>-->
+    <script defer src="/__/firebase/9.4.1/firebase-firestore-compat.js"></script>
+    <!--    <script defer src="/__/firebase/9.4.1/firebase-functions-compat.js"></script>-->
+    <!--    <script defer src="/__/firebase/9.4.1/firebase-messaging-compat.js"></script>-->
+    <!--    <script defer src="/__/firebase/9.4.1/firebase-storage-compat.js"></script>-->
+    <!--    <script defer src="/__/firebase/9.4.1/firebase-analytics-compat.js"></script>-->
+    <!--    <script defer src="/__/firebase/9.4.1/firebase-remote-config-compat.js"></script>-->
+    <!--    <script defer src="/__/firebase/9.4.1/firebase-performance-compat.js"></script>-->
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/ui/6.0.0/firebase-ui-auth.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/6.0.0/firebase-ui-auth.css" />
+
+    <!--
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
+    -->
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="assets/css/index.css">
+
+</head>
+<body>
+<div class="jumbotron text-center" style="margin-bottom:0">
+    <h1>Kastore - take your orders anywhere</h1>
+    <p>An efficient tool to digitize orders!</p>
+</div>
+<div class="user-signed-in">
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <a class="navbar-brand" href="index.html">Kastore</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item ">
+                    <a id="add-orders active" class="nav-link" href="#">Add Orders</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">View Orders</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Templates</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="sign-out">Sign Out</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+<div class="user-signed-in">
+    <form>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Email address</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">Example select</label>
+            <select class="form-control" id="exampleFormControlSelect1">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlSelect2">Example multiple select</label>
+            <select multiple class="form-control" id="exampleFormControlSelect2">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">Example textarea</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+    </form>
+
+</div>
+
+<div class="container user-signed-out" style="margin-top:30px">
+    <div class="row">
+        <div class="col-sm-6 message">
+            <h2 style="text-align: center">Welcome to Kastore! Let's Sign up!</h2>
+        </div>
+        <div class="col-sm-6">
+            <div id="firebaseui-container"></div>
+        </div>
+    </div>
+</div>
+<div class="jumbotron text-center position-fixed fixed-bottom" style="margin-bottom:0">
+    <p>Developed by Rachana Chaudhari</p>
+</div>
+<script defer src="assets/js/add-order.js"></script>
+</body>
+</html>

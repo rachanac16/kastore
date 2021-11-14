@@ -41,40 +41,59 @@
       <h1>Kastore - take your orders anywhere</h1>
       <p>An efficient tool to digitize orders!</p>
     </div>
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-      <a class="navbar-brand" href="#">Kastore</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="collapsibleNavbar">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="#">Add Orders</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">View Orders</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Templates</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <div class="container" style="margin-top:30px">
-      <div class="row">
-        <div class="col-sm-6 message">
-          <h2 style="text-align: center">Welcome to Kastore! Let's Sign up!</h2>
+    <div class="user-signed-in">
+      <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <a class="navbar-brand" href="index.html">Kastore</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item ">
+              <a id="add-orders" class="nav-link" href="add-order.html">Add Orders</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">View Orders</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Templates</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" id="sign-out">Sign Out</a>
+            </li>
+          </ul>
         </div>
-        <div class="col-sm-6">
-          <div id="firebaseui-auth-container"></div>
+      </nav>
+    </div>
+    <div id="content">
+
+      <div class="home">
+
+        <div class="container user-signed-out" style="margin-top:30px">
+          <div class="row">
+            <div class="col-sm-6 message">
+              <h2 style="text-align: center">Welcome to Kastore! Let's Sign up!</h2>
+            </div>
+            <div class="col-sm-6">
+              <div id="firebaseui-container"></div>
+            </div>
+          </div>
         </div>
+
+        <div class="container user-signed-in" style="margin-top:30px">
+          <div class="row">
+            <div class="col-sm-12 message">
+              <h2 style="text-align: center">Catch up on all your orders</h2>
+            </div>
+          </div>
+        </div>
+
       </div>
 
     </div>
-
-    <div class="jumbotron text-center" style="margin-bottom:0">
+    <div class="jumbotron text-center position-fixed fixed-bottom" style="margin-bottom:0">
       <p>Developed by Rachana Chaudhari</p>
     </div>
-    <script src="assets/js/index.js"></script>
+    <script defer src="assets/js/index.js"></script>
   </body>
 </html>
